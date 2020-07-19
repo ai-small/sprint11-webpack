@@ -1,4 +1,6 @@
-class ImagePopup extends Popup {
+import { Popup } from "./popup.js";
+
+export class ImagePopup extends Popup {
 
   constructor(cardImageContainer) {
 
@@ -42,3 +44,4 @@ class ImagePopup extends Popup {
   }
 
 }
+

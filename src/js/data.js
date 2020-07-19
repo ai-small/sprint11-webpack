@@ -1,14 +1,16 @@
-const config = {
+const API_URL = NODE_ENV === 'production' ? 'https://praktikum.tk' : 'http://praktikum.tk';
+
+export const config = {
 
   getUserInfo: {
-    url: 'https://praktikum.tk/cohort11/users/me',
+    url: `${API_URL}/cohort11/users/me`,
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',
     },
   },
   
   updateUserInfo: {
-    url: 'https://praktikum.tk/cohort11/users/me',
+    url: `${API_URL}/cohort11/users/me`,
     method: 'PATCH',
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',
@@ -17,7 +19,7 @@ const config = {
   },
 
   cardList: {
-    url: 'https://praktikum.tk/cohort11/cards',
+    url: `${API_URL}/cohort11/cards`,
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',
     },    
@@ -25,7 +27,7 @@ const config = {
 
   addNewCard: {
 
-    url: 'https://praktikum.tk/cohort11/cards',
+    url: `${API_URL}/cohort11/cards`,
     method: 'POST',
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',
@@ -35,7 +37,7 @@ const config = {
 
   deleteCard: {
 
-    url: 'https://praktikum.tk/cohort11/cards',
+    url: `${API_URL}/cohort11/cards`,
     method: 'DELETE',
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',
@@ -45,7 +47,7 @@ const config = {
 
   putLike: {
 
-    url: 'https://praktikum.tk/cohort11/cards/like',
+    url: `${API_URL}/cohort11/cards/like`,
     method: 'PUT',
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',
@@ -55,7 +57,7 @@ const config = {
 
   deleteLike: {
 
-    url: 'https://praktikum.tk/cohort11/cards/like',
+    url: `${API_URL}/cohort11/cards/like`,
     method: 'DELETE',
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',
@@ -65,7 +67,7 @@ const config = {
 
   updateAvatar: {
 
-    url: 'https://praktikum.tk/cohort11/users/me/avatar',
+    url: `${API_URL}/cohort11/users/me/avatar`,
     method: 'PATCH',
     headers: {
       authorization: '622caa06-e47a-463d-be1d-e472b804c40b',

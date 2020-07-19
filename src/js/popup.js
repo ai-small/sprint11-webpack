@@ -73,5 +73,5 @@ class Popup {
 
 }
 
-
+export { Popup };
 
