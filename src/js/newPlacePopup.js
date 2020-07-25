@@ -1,4 +1,6 @@
-class NewPlacePopup extends Popup {
+import { Popup } from "./popup.js";
+
+export class NewPlacePopup extends Popup {
 
   static _markupNewPlacePopup = `  
   <h3 class="popup__title">Новое место</h3>
@@ -44,7 +46,7 @@ class NewPlacePopup extends Popup {
 
   }
 
-  _open = () => {
+  _open() {
 
     super._open();
     this._renderContent(this.container);
@@ -82,14 +84,13 @@ class NewPlacePopup extends Popup {
       })
   }
 
-  _setEventListeners = () => {
+  _setEventListeners () {
 
     super.setEventListeners();
     this.form.addEventListener('submit', this._submitHandler);    
 
   }
 }
-
 
 
 

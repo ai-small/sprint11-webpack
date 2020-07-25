@@ -1,4 +1,4 @@
-class Api {
+export class Api {
   constructor(config) {
 
     this._getUserInfoConfig = config.getUserInfo;

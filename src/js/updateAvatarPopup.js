@@ -1,4 +1,6 @@
-class UpdateAvatarPopup extends Popup {
+import { Popup } from "./popup.js";
+
+export class UpdateAvatarPopup extends Popup {
 
   static _markupUpdateAvatarPopup = `  
   <h3 class="popup__title">Обновить аватар</h3>
@@ -40,7 +42,7 @@ class UpdateAvatarPopup extends Popup {
 
   }
 
-  _open = () => {
+  _open (event) {
 
     super._open();
     this._renderContent(this.container);
@@ -76,7 +78,7 @@ class UpdateAvatarPopup extends Popup {
       })
   }
 
-  _setEventListeners = (avatar) => {
+  _setEventListeners (avatar) {
 
     super.setEventListeners();
     this.form.addEventListener('submit', this._submitHandler);

@@ -1,4 +1,6 @@
-class EditProfilePopup extends Popup {
+import { Popup } from "./popup.js";
+
+export class EditProfilePopup extends Popup {
 
   static _markupEditPopup = `  
   <h3 class="popup__title">Редактировать профиль</h3>
@@ -54,7 +56,7 @@ class EditProfilePopup extends Popup {
 
   }
 
-  _open = () => {   
+  _open () {   
 
     super._open();
     this._renderContent(this.container);  
@@ -91,7 +93,7 @@ class EditProfilePopup extends Popup {
       })
   }
 
-  _setEventListeners = () => {
+  _setEventListeners () {
 
     super.setEventListeners();
     this.form.addEventListener('submit', this._submitHandler);
@@ -99,4 +101,3 @@ class EditProfilePopup extends Popup {
   }
 
 }
-

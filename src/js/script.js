@@ -1,4 +1,16 @@
-'use strict';
+import '../pages/index.css';
+
+import { Api } from './api.js';
+import { config } from './data.js';
+import { CardList } from './cardList.js';
+import { ImagePopup } from './imagePopup.js'; 
+import { NewPlacePopup } from './newPlacePopup.js';
+import { EditProfilePopup } from './editProfilePopup.js'; 
+import { UpdateAvatarPopup } from './updateAvatarPopup.js'; 
+import { Card } from './card.js';
+import { FormValidator } from './formValidator.js';
+import { UserInfo } from './userInfo.js';
+
 
 (function () {
 
@@ -33,9 +45,6 @@
   const updateAvatarPopup = new UpdateAvatarPopup(containerPopupContent, avatarContainer, createFormValidator, api);
   const userInfo = createUserInfo(api, openEditButton, avatarContainer);
 
-
-  //main
-
   api.getUserInfo()
     .then(res => {
 
@@ -46,7 +55,6 @@
     .catch(err => {
       console.log('Error: ', err);
     })
-
 
   getInitialCards();
 
